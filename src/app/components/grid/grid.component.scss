@@ -1,0 +1,100 @@
+.grid-container {
+  display: grid;
+  border: 2px solid orange;
+  border-radius: 20px;
+  padding: 5px;
+
+  // Note: it means there are 4 columns with 200px
+  // grid-template-columns: 200px 200px 200px 200px;
+
+  // Note: fr is a length unit which represents a fraction of the available space.
+  // grid-template-columns: 3fr 1fr 1fr;
+
+  // grid-template-columns: repeat(3, 1fr);
+
+  // Note: mixture usage, 500px first and then fractions for the rest space.
+  // grid-template-columns: 500px 2fr 1fr;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 50px);
+  // grid-auto-rows: 50px;
+
+  // Note: min value to max value
+  // grid-auto-rows: minmax(50px, auto);
+
+  // column-gap: 10px;
+  // row-gap: 10px;
+  gap: 10px;
+
+  width: 800px;
+  margin: 0 auto;
+
+  & > div {
+    background-color: lightsalmon;
+    color: white;
+    border-radius: 20px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .box-1 {
+    // grid-column-start: 1;
+    // grid-column-end: 4;
+    // grid-row-start: 1;
+    // grid-row-end: 3;
+
+    grid-row: 1 / 3;
+    grid-column: 1 / 4;
+  }
+}
+
+.entities-container {
+  border: 2px solid lightblue;
+  border-radius: 20px;
+  padding: 10px;
+  width: 800px;
+  margin: 50px auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr repeat(3, 2fr);
+  gap: 10px;
+
+  & > * {
+    background-color: lightblue;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .entity-label {
+    grid-column: 1 / 3;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .disti-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .partner-container {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .customer-container {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  .price-container {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  .date-container {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+}

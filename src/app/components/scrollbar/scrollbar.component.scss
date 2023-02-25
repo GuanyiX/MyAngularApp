@@ -1,0 +1,38 @@
+$scrollbar-thumb-color: pink;
+$scrollbar-track-color: #f1f1f1;
+
+.scrollbar-container {
+  border: 1px solid black;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
+
+  .scrollbar-content {
+    height: 500px;
+    width: 1000px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb-color;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $scrollbar-thumb-color;
+    }
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: $scrollbar-track-color;
+  }
+}

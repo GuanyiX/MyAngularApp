@@ -1,0 +1,5 @@
+<ng-container *ngFor="let section of sections; let i = index">
+  <h2>Section {{ i + 1 }} - {{ section.title }}</h2>
+  <ng-template [cdkPortalOutlet]="section.template"></ng-template>
+  <hr class="dotted-divider">
+</ng-container>
