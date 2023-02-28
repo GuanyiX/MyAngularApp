@@ -1,0 +1,1 @@
+type colorTheme = 'primary' | 'secondary';
