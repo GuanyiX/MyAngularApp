@@ -13,7 +13,7 @@ interface ISection {
 @Component({
   selector: 'app-css',
   templateUrl: './css.component.html',
-  styleUrls: ['./css.component.scss', '../../styles/private-page.scss']
+  styleUrls: ['./css.component.scss'],
 })
 export class CssComponent implements OnInit {
   sections: ISection[] = [];

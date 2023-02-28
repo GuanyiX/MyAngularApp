@@ -15,6 +15,10 @@ import { GridComponent } from './components/grid/grid.component';
 import { ScrollbarComponent } from './components/scrollbar/scrollbar.component';
 import { WebkitComponent } from './components/webkit/webkit.component';
 import { RxjsComponent } from './pages/rxjs/rxjs.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 export const APP_CONFIG = new InjectionToken<IAppConfig>('app.config');
 
@@ -39,7 +43,11 @@ export const appInitFactory = (sampleService: SampleService) => {
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    PortalModule
+    PortalModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     SampleService,

@@ -1,2 +1,15 @@
-
+<mat-toolbar>
+  <ng-container *ngFor="let navOption of navOptions; let index = index; let last = last">
+    <button
+      mat-button
+      aria-label="CSS navigation button"
+      color="{{ navOption.selected ? 'primary' : '' }}"
+      (click)="onNavOptionSelect(index)"
+    >
+      <mat-icon>{{ navOption.matIcon }}</mat-icon>
+      {{ navOption.content }}
+    </button>
+    <div class="divider" *ngIf="!last"></div>
+  </ng-container>
+</mat-toolbar>
 <router-outlet></router-outlet>
