@@ -5,7 +5,9 @@ $scrollbar-track-color: #f1f1f1;
   border: 1px solid black;
   width: 500px;
   height: 300px;
-  margin: 0 auto;
+  // margin: 0 auto;
+  resize: horizontal;
+  overflow: auto;
   overflow-y: scroll;
   scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
 

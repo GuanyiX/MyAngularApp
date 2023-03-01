@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { AnimationComponent } from './components/animation/animation.component';
 
 export const APP_CONFIG = new InjectionToken<IAppConfig>('app.config');
 
@@ -36,6 +37,7 @@ export const appInitFactory = (sampleService: SampleService) => {
     ScrollbarComponent,
     WebkitComponent,
     RxjsComponent,
+    AnimationComponent,
   ],
   imports: [
     HttpClientModule,

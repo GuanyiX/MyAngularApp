@@ -4,6 +4,7 @@ import { FlexboxComponent } from 'src/app/components/flexbox/flexbox.component';
 import { ScrollbarComponent } from 'src/app/components/scrollbar/scrollbar.component';
 import { WebkitComponent } from 'src/app/components/webkit/webkit.component';
 import { GridComponent } from 'src/app/components/grid/grid.component';
+import { AnimationComponent } from 'src/app/components/animation/animation.component';
 
 interface ISection {
   title: string;
@@ -22,6 +23,7 @@ export class CssComponent implements OnInit {
 
   ngOnInit(): void {
     this.sections = [
+      { title: 'Animation', template: new ComponentPortal(AnimationComponent) },
       { title: 'Flexbox', template: new ComponentPortal(FlexboxComponent) },
       { title: 'Grid', template: new ComponentPortal(GridComponent) },
       { title: 'Scrollbar', template: new ComponentPortal(ScrollbarComponent) },
